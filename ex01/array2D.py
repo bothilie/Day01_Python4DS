@@ -2,6 +2,7 @@ import numpy as np
 
 
 def slice_me(family: list, start: int, end: int) -> list:
+    slice_me.__doc__ = "This slice an array" #ne fonctionne pas
     if not isinstance(family, list):
         print("there is no list as first argument")
         return[]
@@ -26,4 +27,8 @@ def slice_me(family: list, start: int, end: int) -> list:
     tab.reshape(length, tab.ndim)
     L = tab[start:end,:]
     print(f"My shape is : ({end-start},{L.ndim})")    
+    help(slice_me)
     print(L)
+
+if __name__ == "__main__":
+    slice_me()
